@@ -3,5 +3,5 @@
     "description": "D BLAS header",
     "authors": ["Ilya Yaroshenko"],
     "homepage": "http://github.com/9il/cblas",
-    "license": "BSD"
+    "license": "MIT"
 }
