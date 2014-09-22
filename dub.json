@@ -1,7 +1,7 @@
 {
     "name": "cblas",
-	"description": "D BLAS header",
-	"authors": ["Ilya Yaroshenko"],
-	"homepage": "http://github.com/9il/cblas",
-	"license": "BSD",
+    "description": "D BLAS header",
+    "authors": ["Ilya Yaroshenko"],
+    "homepage": "http://github.com/9il/cblas",
+    "license": "BSD"
 }
