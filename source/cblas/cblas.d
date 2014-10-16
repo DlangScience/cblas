@@ -185,6 +185,7 @@ alias Side = CBLAS_SIDE;
 	
 extern(C)
 {
+@nogc nothrow:
 
 	version(OPENBLAS)
 	{
