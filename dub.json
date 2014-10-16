@@ -1,7 +1,8 @@
 {
     "name": "cblas",
-	"targetType": "library",
     "description": "D BLAS header",
+	"targetType": "library",
+	"libs" : ["blas"],
 	"homepage": "http://github.com/9il/cblas",
 	"copyright": "Copyright © 2014 Ilya Yaroshenko",
 	"authors": [
