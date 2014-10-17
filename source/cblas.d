@@ -167,7 +167,7 @@ version(BLASNATIVEINT)
 else
 	alias blasint = int;
 
-pragma(msg, "blasint = "~blasint.stringof);
+version(debug) pragma(msg, "blasint = "~blasint.stringof);
 
 alias complex_float = Complex!float;
 alias complex_double = Complex!double;
