@@ -4,3 +4,5 @@ __dummy.html
 docs.json
 /docs
 /.dub
+
+*.a
