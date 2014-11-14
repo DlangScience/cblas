@@ -1,4 +1,4 @@
 D BLAS header
 =======
 
-Works with [OpenBLAS](https://github.com/xianyi/OpenBLAS).
+Works with [OpenBLAS](https://github.com/xianyi/OpenBLAS) and others.
