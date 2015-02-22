@@ -10,3 +10,5 @@ docs.json
 *.o
 
 __test__library__
+
+project.sublime-project
