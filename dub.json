@@ -7,5 +7,6 @@
 	"authors": [
 		"Ilya Yaroshenko"
 	],
-	"license": "BSL 1.0"
+	"license": "BSL-1.0",
+	"libs": ["blas"]
 }
