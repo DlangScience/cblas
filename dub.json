@@ -1,12 +1,11 @@
 {
-    "name": "cblas",
-    "description": "D BLAS header",
+	"name": "cblas",
+	"description": "D BLAS header",
 	"targetType": "library",
-	"libs" : ["blas"],
 	"homepage": "http://github.com/9il/cblas",
-	"copyright": "Copyright © 2014 Ilya Yaroshenko",
+	"copyright": "Copyright © 2014-2015 Ilya Yaroshenko",
 	"authors": [
 		"Ilya Yaroshenko"
 	],
-	"license": "Subject to the terms of the MIT license, as written in the included LICENSE.md file."
+	"license": "BSL 1.0"
 }
