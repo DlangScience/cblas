@@ -7,6 +7,7 @@ module cblas;
 
 public import cblas.cblas;
 
+///
 unittest
 {
 	import std.typetuple;
