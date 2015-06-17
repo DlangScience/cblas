@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/9il/cblas.svg)](https://travis-ci.org/9il/cblas)
+[![Build Status](https://travis-ci.org/DlangScience/cblas.svg)](https://travis-ci.org/DlangScience/cblas)
 
 D BLAS header
 =======
 Works with [OpenBLAS](https://github.com/xianyi/OpenBLAS) and others.
 
-See also https://github.com/9il/simple_matrix
+See also https://github.com/DlangScience/simple_matrix
