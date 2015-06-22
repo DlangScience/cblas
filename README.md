@@ -3,5 +3,3 @@
 D BLAS header
 =======
 Works with [OpenBLAS](https://github.com/xianyi/OpenBLAS) and others.
-
-See also https://github.com/DlangScience/simple_matrix
