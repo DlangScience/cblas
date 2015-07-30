@@ -9,5 +9,5 @@ d:
 
 addons:
   apt:
-    sources:
+    packages:
       libblas-dev
