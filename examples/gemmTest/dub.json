@@ -1,0 +1,8 @@
+{
+    "name": "gemmtest",
+    "dependencies": {
+        "cblas": { "path": "../../" }
+    },
+    "sourcePath": ".",
+    "targetType": "executable"
+}
