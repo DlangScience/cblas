@@ -1,5 +1,9 @@
 sudo: false
 
+os:
+ - linux
+ - osx
+
 language: d
 
 d:
@@ -8,6 +12,11 @@ d:
  - dmd-2.066.1
  - ldc-0.15.1
  - gdc
+
+matrix:
+  allow_failures:
+   - os: osx
+     d: gdc
 
 addons:
   apt:
