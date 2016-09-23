@@ -10,14 +10,6 @@ import std.complex : Complex;
 extern(C) @system @nogc nothrow:
 
 version(OPENBLAS)
-	version = CBLAS_CAN_RETURNS_COMPLEX;
-
-version(INTEL_MKL)
-	version = CBLAS_CAN_RETURNS_COMPLEX;
-
-
-
-version(OPENBLAS)
 {
 	enum OPENBLAS_SEQUENTIAL = 0;
 	/* OpenBLAS is compiled using normal threading model */
@@ -120,28 +112,14 @@ float  cblas_sdot(in blasint n, in float  *x, in blasint incx, in float  *y, in 
 ///
 double cblas_ddot(in blasint n, in double *x, in blasint incx, in double *y, in blasint incy);
 
-version(CBLAS_CAN_RETURNS_COMPLEX)
-{
-	///
-	Complex!float  cblas_cdotu(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy);
-	///
-	Complex!float  cblas_cdotc(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy);
-	///
-	Complex!double cblas_zdotu(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy);
-	///
-	Complex!double cblas_zdotc(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy);
-}
-else
-{
-	///
-	Complex!float   cblas_cdotu(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy) {Complex!float  ret; cblas_cdotu_sub(n, x, incx, y, incy,  &ret); return ret; }
-	///
-	Complex!float   cblas_cdotc(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy) {Complex!float  ret; cblas_cdotc_sub(n, x, incx, y, incy,  &ret); return ret; }
-	///
-	Complex!double  cblas_zdotu(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy) {Complex!double ret; cblas_zdotu_sub(n, x, incx, y, incy,  &ret); return ret; }
-	///
-	Complex!double  cblas_zdotc(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy) {Complex!double ret; cblas_zdotc_sub(n, x, incx, y, incy,  &ret); return ret; }
-}
+///
+Complex!float  cblas_cdotu(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy);
+///
+Complex!float  cblas_cdotc(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy);
+///
+Complex!double cblas_zdotu(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy);
+///
+Complex!double cblas_zdotc(in blasint n, in Complex!double *x, in blasint incx, in Complex!double *y, in blasint incy);
 
 ///
 void  cblas_cdotu_sub(in blasint n, in Complex!float  *x, in blasint incx, in Complex!float  *y, in blasint incy, Complex!float  *ret);
