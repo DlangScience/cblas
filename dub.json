@@ -8,8 +8,7 @@
         "Ilya Yaroshenko"
     ],
     "license": "BSL-1.0",
-    "libs": ["blas"],
-    
+
     "buildTypes": {
         "DSddox": {
             "buildOptions": ["syntaxOnly"],
