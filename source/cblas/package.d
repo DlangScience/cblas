@@ -8,22 +8,6 @@ module cblas;
 public import cblas.cblas;
 
 ///
-unittest
-{
-	import std.typetuple;
-	import std.complex;
-	foreach(T; TypeTuple!(float, double))
-	{
-		auto x = [T(1), T(2), T(3)];
-		auto y = [T(2), T(3), T(4)];
-		assert(dot(3, x.ptr, 1, y.ptr, 1) == 20);
-		auto cx = [Complex!T(1), Complex!T(2), Complex!T(3)];
-		auto cy = [Complex!T(2), Complex!T(3), Complex!T(4)];
-		assert(dotu(3, cx.ptr, 1, cy.ptr, 1) == 20);
-	}
-}
-
-///
 alias sdsdot = cblas_sdsdot;
 ///
 alias dsdot = cblas_dsdot;
