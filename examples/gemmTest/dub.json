@@ -4,5 +4,6 @@
         "cblas": { "path": "../../" }
     },
     "sourcePath": ".",
-    "targetType": "executable"
+    "targetType": "executable",
+    "libs": ["blas"]
 }
