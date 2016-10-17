@@ -1,7 +1,7 @@
 {
     "name": "cblas",
     "description": "D BLAS header",
-    "targetType": "library",
+    "targetType": "sourceLibrary",
     "homepage": "http://github.com/DlangScience/cblas",
     "copyright": "Copyright © 2014-2015 Ilya Yaroshenko",
     "authors": [
