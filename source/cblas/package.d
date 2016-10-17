@@ -7,6 +7,11 @@ module cblas;
 
 public import cblas.cblas;
 
+version(LDC)
+{
+    pragma(LDC_no_moduleinfo);
+}
+
 ///
 alias sdsdot = cblas_sdsdot;
 ///
