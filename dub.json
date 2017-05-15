@@ -3,7 +3,7 @@
     "description": "D BLAS header",
     "targetType": "sourceLibrary",
     "homepage": "http://github.com/DlangScience/cblas",
-    "copyright": "Copyright © 2014-2015 Ilya Yaroshenko",
+    "copyright": "Copyright © 2014-2017 Ilya Yaroshenko",
     "authors": [
         "Ilya Yaroshenko"
     ],
