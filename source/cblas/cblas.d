@@ -177,9 +177,9 @@ void cblas_saxpy(in blasint n, in float alpha, in float *x, in blasint incx, flo
 ///
 void cblas_daxpy(in blasint n, in double alpha, in double *x, in blasint incx, double *y, in blasint incy);
 ///
-void cblas_caxpy(in blasint n, in _cfloat *alpha, in _cfloat *x, in blasint incx, _cfloat *y, in blasint incy);
+void cblas_caxpy(in blasint n, in ref _cfloat alpha, in _cfloat *x, in blasint incx, _cfloat *y, in blasint incy);
 ///
-void cblas_zaxpy(in blasint n, in _cdouble *alpha, in _cdouble *x, in blasint incx, _cdouble *y, in blasint incy);
+void cblas_zaxpy(in blasint n, in ref _cdouble alpha, in _cdouble *x, in blasint incx, _cdouble *y, in blasint incy);
 
 ///
 void cblas_scopy(in blasint n, in float *x, in blasint incx, float *y, in blasint incy);
@@ -220,9 +220,9 @@ void cblas_sscal(in blasint N, in float alpha, float *X, in blasint incX);
 ///
 void cblas_dscal(in blasint N, in double alpha, double *X, in blasint incX);
 ///
-void cblas_cscal(in blasint N, in _cfloat *alpha, _cfloat *X, in blasint incX);
+void cblas_cscal(in blasint N, in ref _cfloat alpha, _cfloat *X, in blasint incX);
 ///
-void cblas_zscal(in blasint N, in _cdouble *alpha, _cdouble *X, in blasint incX);
+void cblas_zscal(in blasint N, in ref _cdouble alpha, _cdouble *X, in blasint incX);
 ///
 void cblas_csscal(in blasint N, in _cfloat alpha, _cfloat *X, in blasint incX);
 ///
@@ -233,22 +233,22 @@ void cblas_sgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m,
 ///
 void cblas_dgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m, in blasint n, in double alpha, in double  *a, in blasint lda,  in double  *x, in blasint incx,  in double beta,  double  *y, in blasint incy);
 ///
-void cblas_cgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m, in blasint n, in _cfloat *alpha, in _cfloat  *a, in blasint lda,  in _cfloat  *x, in blasint incx,  in _cfloat *beta,  _cfloat  *y, in blasint incy);
+void cblas_cgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m, in blasint n, in ref _cfloat alpha, in _cfloat  *a, in blasint lda,  in _cfloat  *x, in blasint incx,  in ref _cfloat beta,  _cfloat  *y, in blasint incy);
 ///
-void cblas_zgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m, in blasint n, in _cdouble *alpha, in _cdouble  *a, in blasint lda,  in _cdouble  *x, in blasint incx,  in _cdouble *beta,  _cdouble  *y, in blasint incy);
+void cblas_zgemv(in CBLAS_ORDER order,  in CBLAS_TRANSPOSE trans,  in blasint m, in blasint n, in ref _cdouble alpha, in _cdouble  *a, in blasint lda,  in _cdouble  *x, in blasint incx,  in ref _cdouble beta,  _cdouble  *y, in blasint incy);
 
 ///
 void cblas_sger (in CBLAS_ORDER order, in blasint M, in blasint N, in float   alpha, in float  *X, in blasint incX, in float  *Y, in blasint incY, float  *A, in blasint lda);
 ///
 void cblas_dger (in CBLAS_ORDER order, in blasint M, in blasint N, in double  alpha, in double *X, in blasint incX, in double *Y, in blasint incY, double *A, in blasint lda);
 ///
-void cblas_cgeru(in CBLAS_ORDER order, in blasint M, in blasint N, in _cfloat  *alpha, in _cfloat  *X, in blasint incX, in _cfloat  *Y, in blasint incY, _cfloat  *A, in blasint lda);
+void cblas_cgeru(in CBLAS_ORDER order, in blasint M, in blasint N, in ref _cfloat  alpha, in _cfloat  *X, in blasint incX, in _cfloat  *Y, in blasint incY, _cfloat  *A, in blasint lda);
 ///
-void cblas_cgerc(in CBLAS_ORDER order, in blasint M, in blasint N, in _cfloat  *alpha, in _cfloat  *X, in blasint incX, in _cfloat  *Y, in blasint incY, _cfloat  *A, in blasint lda);
+void cblas_cgerc(in CBLAS_ORDER order, in blasint M, in blasint N, in ref _cfloat  alpha, in _cfloat  *X, in blasint incX, in _cfloat  *Y, in blasint incY, _cfloat  *A, in blasint lda);
 ///
-void cblas_zgeru(in CBLAS_ORDER order, in blasint M, in blasint N, in _cdouble *alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
+void cblas_zgeru(in CBLAS_ORDER order, in blasint M, in blasint N, in ref _cdouble alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
 ///
-void cblas_zgerc(in CBLAS_ORDER order, in blasint M, in blasint N, in _cdouble *alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
+void cblas_zgerc(in CBLAS_ORDER order, in blasint M, in blasint N, in ref _cdouble alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
 
 ///
 void cblas_strsv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint N, in float *A, in blasint lda, float *X, in blasint incX);
@@ -282,18 +282,18 @@ void cblas_ssyr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in floa
 ///
 void cblas_dsyr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in double alpha, in double *X, in blasint incX, in double *Y, in blasint incY, double *A, in blasint lda);
 ///
-void cblas_cher2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cfloat *alpha, in _cfloat *X, in blasint incX, in _cfloat *Y, in blasint incY, _cfloat *A, in blasint lda);
+void cblas_cher2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cfloat alpha, in _cfloat *X, in blasint incX, in _cfloat *Y, in blasint incY, _cfloat *A, in blasint lda);
 ///
-void cblas_zher2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cdouble *alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
+void cblas_zher2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cdouble alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *A, in blasint lda);
 
 ///
 void cblas_sgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in float alpha, in float *A, in blasint lda, in float *X, in blasint incX, in float beta, float *Y, in blasint incY);
 ///
 void cblas_dgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in double alpha, in double *A, in blasint lda, in double *X, in blasint incX, in double beta, double *Y, in blasint incY);
 ///
-void cblas_cgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *X, in blasint incX, in _cfloat *beta, _cfloat *Y, in blasint incY);
+void cblas_cgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in _cfloat *X, in blasint incX, in ref _cfloat beta, _cfloat *Y, in blasint incY);
 ///
-void cblas_zgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *X, in blasint incX, in _cdouble *beta, _cdouble *Y, in blasint incY);
+void cblas_zgbmv(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in blasint M, in blasint N, in blasint KL, in blasint KU, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in _cdouble *X, in blasint incX, in ref _cdouble beta, _cdouble *Y, in blasint incY);
 
 ///
 void cblas_ssbmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in blasint K, in float alpha, in float *A, in blasint lda, in float *X, in blasint incX, in float beta, float *Y, in blasint incY);
@@ -342,9 +342,9 @@ void cblas_ssymv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in floa
 ///
 void cblas_dsymv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in double alpha, in double *A, in blasint lda, in double *X, in blasint incX, in double beta, double *Y, in blasint incY);
 ///
-void cblas_chemv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *X, in blasint incX, in _cfloat *beta, _cfloat *Y, in blasint incY);
+void cblas_chemv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in _cfloat *X, in blasint incX, in ref _cfloat beta, _cfloat *Y, in blasint incY);
 ///
-void cblas_zhemv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *X, in blasint incX, in _cdouble *beta, _cdouble *Y, in blasint incY);
+void cblas_zhemv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in _cdouble *X, in blasint incX, in ref _cdouble beta, _cdouble *Y, in blasint incY);
 
 
 ///
@@ -367,78 +367,78 @@ void cblas_sspr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in floa
 ///
 void cblas_dspr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in double alpha, in double *X, in blasint incX, in double *Y, in blasint incY, double *A);
 ///
-void cblas_chpr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cfloat *alpha, in _cfloat *X, in blasint incX, in _cfloat *Y, in blasint incY, _cfloat *Ap);
+void cblas_chpr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cfloat alpha, in _cfloat *X, in blasint incX, in _cfloat *Y, in blasint incY, _cfloat *Ap);
 ///
-void cblas_zhpr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in _cdouble *alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *Ap);
+void cblas_zhpr2(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cdouble alpha, in _cdouble *X, in blasint incX, in _cdouble *Y, in blasint incY, _cdouble *Ap);
 
 ///
-void cblas_chbmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in blasint K, in float *alpha, in float *A, in blasint lda, in float *X, in blasint incX, in float *beta, float *Y, in blasint incY);
+void cblas_chbmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in blasint K, in ref _cfloat alpha, in float *A, in blasint lda, in float *X, in blasint incX, in _cfloat beta, float *Y, in blasint incY);
 ///
-void cblas_zhbmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in blasint K, in double *alpha, in double *A, in blasint lda, in double *X, in blasint incX, in double *beta, double *Y, in blasint incY);
+void cblas_zhbmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in blasint K, in ref _cdouble alpha, in double *A, in blasint lda, in double *X, in blasint incX, in _cdouble beta, double *Y, in blasint incY);
 
 ///
-void cblas_chpmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in float *alpha, in float *Ap, in float *X, in blasint incX, in float *beta, float *Y, in blasint incY);
+void cblas_chpmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cfloat alpha, in float *Ap, in float *X, in blasint incX, in _cfloat beta, float *Y, in blasint incY);
 ///
-void cblas_zhpmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in double *alpha, in double *Ap, in double *X, in blasint incX, in double *beta, double *Y, in blasint incY);
+void cblas_zhpmv(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in blasint N, in ref _cdouble alpha, in double *Ap, in double *X, in blasint incX, in _cdouble beta, double *Y, in blasint incY);
 
 ///
 void cblas_sgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in float alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
 ///
 void cblas_dgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in double alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
 ///
-void cblas_cgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in _cfloat *beta, _cfloat *C, in blasint ldc);
+void cblas_cgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in ref _cfloat beta, _cfloat *C, in blasint ldc);
 ///
-void cblas_zgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in _cdouble *beta, _cdouble *C, in blasint ldc);
+void cblas_zgemm(in CBLAS_ORDER order, in CBLAS_TRANSPOSE TransA, in CBLAS_TRANSPOSE TransB, in blasint M, in blasint N, in blasint K, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in ref _cdouble beta, _cdouble *C, in blasint ldc);
 
 ///
 void cblas_ssymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in float alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
 ///
 void cblas_dsymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in double alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
 ///
-void cblas_csymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in _cfloat *beta, _cfloat *C, in blasint ldc);
+void cblas_csymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in ref _cfloat beta, _cfloat *C, in blasint ldc);
 ///
-void cblas_zsymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in _cdouble *beta, _cdouble *C, in blasint ldc);
+void cblas_zsymm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in ref _cdouble beta, _cdouble *C, in blasint ldc);
 
 ///
 void cblas_ssyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in float alpha, in float *A, in blasint lda, in float beta, float *C, in blasint ldc);
 ///
 void cblas_dsyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in double alpha, in double *A, in blasint lda, in double beta, double *C, in blasint ldc); 
 ///
-void cblas_csyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *beta, _cfloat *C, in blasint ldc);
+void cblas_csyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in ref _cfloat beta, _cfloat *C, in blasint ldc);
 ///
-void cblas_zsyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *beta, _cdouble *C, in blasint ldc);
+void cblas_zsyrk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in ref _cdouble beta, _cdouble *C, in blasint ldc);
 
 ///
 void cblas_ssyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in float alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
 ///
 void cblas_dsyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in double alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
 ///
-void cblas_csyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in _cfloat *alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in _cfloat *beta, _cfloat *C, in blasint ldc);
+void cblas_csyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cfloat alpha, in _cfloat *A, in blasint lda, in _cfloat *B, in blasint ldb, in ref _cfloat beta, _cfloat *C, in blasint ldc);
 ///
-void cblas_zsyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in _cdouble *alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in _cdouble *beta, _cdouble *C, in blasint ldc);
+void cblas_zsyr2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cdouble alpha, in _cdouble *A, in blasint lda, in _cdouble *B, in blasint ldb, in ref _cdouble beta, _cdouble *C, in blasint ldc);
 
 ///
 void cblas_strmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in float alpha, in float *A, in blasint lda, float *B, in blasint ldb);
 ///
 void cblas_dtrmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in double alpha, in double *A, in blasint lda, double *B, in blasint ldb);
 ///
-void cblas_ctrmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in _cfloat *alpha, in _cfloat *A, in blasint lda, _cfloat *B, in blasint ldb);
+void cblas_ctrmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in ref _cfloat alpha, in _cfloat *A, in blasint lda, _cfloat *B, in blasint ldb);
 ///
-void cblas_ztrmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in _cdouble *alpha, in _cdouble *A, in blasint lda, _cdouble *B, in blasint ldb);
+void cblas_ztrmm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in ref _cdouble alpha, in _cdouble *A, in blasint lda, _cdouble *B, in blasint ldb);
 
 ///
 void cblas_strsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in float alpha, in float *A, in blasint lda, float *B, in blasint ldb);
 ///
 void cblas_dtrsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in double alpha, in double *A, in blasint lda, double *B, in blasint ldb);
 ///
-void cblas_ctrsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in _cfloat *alpha, in _cfloat *A, in blasint lda, _cfloat *B, in blasint ldb);
+void cblas_ctrsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in ref _cfloat alpha, in _cfloat *A, in blasint lda, _cfloat *B, in blasint ldb);
 ///
-void cblas_ztrsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in _cdouble *alpha, in _cdouble *A, in blasint lda, _cdouble *B, in blasint ldb);
+void cblas_ztrsm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE TransA, in CBLAS_DIAG Diag, in blasint M, in blasint N, in ref _cdouble alpha, in _cdouble *A, in blasint lda, _cdouble *B, in blasint ldb);
 
 ///
-void cblas_chemm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in float *alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float *beta, float *C, in blasint ldc);
+void cblas_chemm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in ref _cfloat alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in _cfloat beta, float *C, in blasint ldc);
 ///
-void cblas_zhemm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in double *alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double *beta, double *C, in blasint ldc);
+void cblas_zhemm(in CBLAS_ORDER order, in CBLAS_SIDE Side, in CBLAS_UPLO Uplo, in blasint M, in blasint N, in ref _cdouble alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in _cdouble beta, double *C, in blasint ldc);
 
 ///
 void cblas_cherk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in float alpha, in float *A, in blasint lda, in float beta, float *C, in blasint ldc);
@@ -446,9 +446,9 @@ void cblas_cherk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Tr
 void cblas_zherk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in double alpha, in double *A, in blasint lda, in double beta, double *C, in blasint ldc);
 
 ///
-void cblas_cher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in float *alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
+void cblas_cher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cfloat alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
 ///
-void cblas_zher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in double *alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
+void cblas_zher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cdouble alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
 
 ///
 void cblas_xerbla(blasint p, char *rout, char *form, ...);

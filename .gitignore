@@ -12,3 +12,7 @@ docs.json
 __test__library__
 
 project.sublime-project
+
+cblas-test-library
+
+examples/gemmTest/gemmtest

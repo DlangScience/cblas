@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"name": "cblas",
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"include_paths":
+		[
+			"/Users/9il/Documents/CBLAS/source/"
+		],
+		"package_file": "/Users/9il/Documents/CBLAS/dub.json"
+	}
+}
