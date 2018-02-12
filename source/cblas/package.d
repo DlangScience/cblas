@@ -53,13 +53,13 @@ alias cnrm2 = cblas_scnrm2;
 ///
 alias znrm2 = cblas_dznrm2;
 ///
-alias samax = cblas_isamax;
+alias iamax = cblas_isamax;
 ///
-alias damax = cblas_idamax;
+alias iamax = cblas_idamax;
 ///
-alias camax = cblas_icamax;
+alias iamax = cblas_icamax;
 ///
-alias zamax = cblas_izamax;
+alias iamax = cblas_izamax;
 ///
 alias axpy = cblas_saxpy;
 ///
