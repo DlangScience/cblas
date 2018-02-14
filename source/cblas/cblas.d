@@ -119,6 +119,11 @@ version(OPENBLAS)
 }
 
 ///
+void cblas_xerbla(blasint p, char *rout, char *form, ...);
+
+pure:
+
+///
 float  cblas_sdsdot(in blasint n, in float alpha, in float *x, in blasint incx, in float *y, in blasint incy);
 ///
 double cblas_dsdot (in blasint n, in float *x, in blasint incx, in float *y, in blasint incy);
@@ -449,6 +454,3 @@ void cblas_zherk(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Tr
 void cblas_cher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cfloat alpha, in float *A, in blasint lda, in float *B, in blasint ldb, in float beta, float *C, in blasint ldc);
 ///
 void cblas_zher2k(in CBLAS_ORDER order, in CBLAS_UPLO Uplo, in CBLAS_TRANSPOSE Trans, in blasint N, in blasint K, in ref _cdouble alpha, in double *A, in blasint lda, in double *B, in blasint ldb, in double beta, double *C, in blasint ldc);
-
-///
-void cblas_xerbla(blasint p, char *rout, char *form, ...);
