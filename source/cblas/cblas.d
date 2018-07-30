@@ -46,7 +46,7 @@ else
 debug pragma(msg, "blasint = " ~ blasint.stringof);
 
 ///
-enum CBLAS_ORDER : blasint  {
+enum CBLAS_LAYOUT {
 	///
 	RowMajor=101,
 	///
@@ -54,10 +54,14 @@ enum CBLAS_ORDER : blasint  {
 };
 
 ///
+alias Layout = CBLAS_LAYOUT;
+
+alias CBLAS_ORDER = CBLAS_LAYOUT;
+
 alias Order = CBLAS_ORDER;
 
 ///
-enum CBLAS_TRANSPOSE : blasint {
+enum CBLAS_TRANSPOSE {
 	///
 	NoTrans=111,
 	///
@@ -72,7 +76,7 @@ enum CBLAS_TRANSPOSE : blasint {
 alias Transpose = CBLAS_TRANSPOSE;
 
 ///
-enum CBLAS_UPLO  : blasint {
+enum CBLAS_UPLO {
 	///
 	Upper=121, 
 	///
@@ -83,7 +87,7 @@ enum CBLAS_UPLO  : blasint {
 alias Uplo = CBLAS_UPLO;
 
 ///
-enum CBLAS_DIAG  : blasint {
+enum CBLAS_DIAG {
 	///
 	NonUnit=131,
 	///
@@ -94,7 +98,7 @@ enum CBLAS_DIAG  : blasint {
 alias Diag = CBLAS_DIAG;
 
 ///
-enum CBLAS_SIDE  : blasint {
+enum CBLAS_SIDE {
 	///
 	Left=141,
 	///
@@ -103,6 +107,19 @@ enum CBLAS_SIDE  : blasint {
 
 ///
 alias Side = CBLAS_SIDE;
+
+///
+enum CBLAS_OFFSET {
+	///
+	RowOffset=171, 
+	///
+	ColOffset=172,
+	///
+	FixOffset=173
+};
+
+///
+alias Offset = CBLAS_OFFSET;
 
 version(OPENBLAS)
 {
