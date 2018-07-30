@@ -95,7 +95,7 @@ enum CBLAS_DIAG {
 };
 
 ///
-alias Diag;
+alias Diag = CBLAS_DIAG;
 
 ///
 enum CBLAS_SIDE {
