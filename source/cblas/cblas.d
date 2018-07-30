@@ -118,6 +118,7 @@ enum CBLAS_OFFSET {
 	FixOffset=173
 };
 
+///
 alias Offset = CBLAS_OFFSET;
 
 version(OPENBLAS)
