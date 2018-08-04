@@ -18,3 +18,5 @@ cblas-test-library
 examples/gemmTest/gemmtest
 
 untitled.sublime-project
+
+build/
