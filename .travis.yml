@@ -29,8 +29,7 @@ d:
 
 matrix:
   allow_failures:
-   - os: osx
-     d: gdc
+   - d: gdc
    - d: dmd-beta
    - d: ldc-beta
 
