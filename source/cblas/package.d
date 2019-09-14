@@ -49,9 +49,11 @@ alias nrm2 = cblas_snrm2;
 ///
 alias nrm2 = cblas_dnrm2;
 ///
-alias cnrm2 = cblas_scnrm2;
+alias nrm2 = cblas_scnrm2;
+deprecated("use 'nrm2' alias instead") alias cnrm2 = cblas_scnrm2;
 ///
-alias znrm2 = cblas_dznrm2;
+alias nrm2 = cblas_dznrm2;
+deprecated("use 'nrm2' alias instead") alias znrm2 = cblas_dznrm2;
 ///
 alias iamax = cblas_isamax;
 ///
