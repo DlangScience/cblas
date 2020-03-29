@@ -1,8 +1,8 @@
-project('cblas', 'd', version : '2.0.3', license: 'BSL-1.0')
+project('cblas', 'd', version : '2.0.5', license: 'BSL-1.0')
 
 cblas_dir = include_directories('source/')
 
-cblas_dep = declare_dependency(
+this_dep = declare_dependency(
     include_directories: cblas_dir,
 )
 
@@ -17,3 +17,5 @@ import('pkgconfig').generate(
     subdirs: 'd/' + meson.project_name(),
     version: meson.project_version(),
 )
+
+cblas_dep = this_dep
