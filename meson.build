@@ -1,4 +1,4 @@
-project('cblas', 'd', version : '2.0.5', license: 'BSL-1.0')
+project('cblas', 'd', version : '2.1.0', license: 'BSL-1.0')
 
 cblas_dir = include_directories('source/')
 
