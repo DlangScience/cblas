@@ -37,5 +37,4 @@ addons:
       libblas-dev
 
 script:
- - dub test --compiler=${DC}
  - for ex in $(ls -d examples/*/); do dub test --root=$ex --compiler=${DC}; done
