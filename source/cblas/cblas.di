@@ -43,8 +43,6 @@ else
 	///
 	alias blasint = int;
 
-debug pragma(msg, "blasint = " ~ blasint.stringof);
-
 ///
 enum CBLAS_LAYOUT {
 	///
