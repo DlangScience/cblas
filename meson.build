@@ -22,8 +22,6 @@ this_dep = declare_dependency(
     dependencies: required_deps,
 )
 
-test_versions = ['mir_test', 'mir_bignum_test', 'mir_secure_memory']
-
 install_subdir('source/',
     strip_directory : true,
     install_dir: 'include/d/' + meson.project_name(),
