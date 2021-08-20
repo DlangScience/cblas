@@ -1,21 +1,32 @@
 project('cblas', 'd', version : '2.1.0', license: 'BSL-1.0')
 
-cblas_dir = include_directories('source/')
+description = 'CBLAS header'
+
+subprojects = ['mir-core']
+
+sources_list = [
+]
+
+required_deps = []
+
+foreach p : subprojects 
+    required_deps += dependency(p, fallback : [p, 'this_dep'])
+endforeach
+
+directories = ['source']
+
+directories = include_directories(directories)
 
 this_dep = declare_dependency(
-    include_directories: cblas_dir,
+    include_directories: directories,
+    dependencies: required_deps,
 )
+
+test_versions = ['mir_test', 'mir_bignum_test', 'mir_secure_memory']
 
 install_subdir('source/',
     strip_directory : true,
     install_dir: 'include/d/' + meson.project_name(),
-)
-
-import('pkgconfig').generate(
-    name: meson.project_name() + '-d',
-    description: 'CBLAS header for Dlang.',
-    subdirs: 'd/' + meson.project_name(),
-    version: meson.project_version(),
 )
 
 cblas_dep = this_dep

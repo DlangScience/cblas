@@ -8,7 +8,9 @@
         "Ilya Yaroshenko"
     ],
     "license": "BSL-1.0",
-
+	"dependencies": {
+		"mir-core": "~>1.1.77"
+	},
     "buildTypes": {
         "DSddox": {
             "buildOptions": ["syntaxOnly"],

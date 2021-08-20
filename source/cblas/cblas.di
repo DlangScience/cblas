@@ -10,7 +10,15 @@ version(LDC)
     pragma(LDC_no_moduleinfo);
 }
 
-import std.complex : Complex;
+version(CBLAS_STD_COMPLEX)
+{
+	import std.complex : Complex;
+}
+else
+{
+	import mir.complex : Complex;
+}
+
 alias _cfloat = Complex!float;
 alias _cdouble = Complex!double;
 
