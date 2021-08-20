@@ -10,17 +10,9 @@ version(LDC)
     pragma(LDC_no_moduleinfo);
 }
 
-version(CBLAS_STD_COMPLEX)
-{
-	import std.complex : Complex;
-	alias _cfloat = Complex!float;
-	alias _cdouble = Complex!double;
-}
-else
-{
-	alias _cfloat = cfloat;
-	alias _cdouble = cdouble;
-}
+import std.complex : Complex;
+alias _cfloat = Complex!float;
+alias _cdouble = Complex!double;
 
 extern(C) @system @nogc nothrow:
 
