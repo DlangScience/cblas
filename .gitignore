@@ -21,3 +21,4 @@ untitled.sublime-project
 
 build/
 examples/gemmTest/gemmtest-test-application
+subprojects/mir-core/
