@@ -30,7 +30,7 @@ version(OPENBLAS)
 	/* OpenBLAS is compiled using normal threading model */
 	enum OPENBLAS_THREAD = 1;
 	/* OpenBLAS is compiled using OpenMP threading model */
-	enum OPENBLAS_OPENMP = 2;	
+	enum OPENBLAS_OPENMP = 2;
 }
 
 ///
@@ -76,7 +76,7 @@ alias Transpose = CBLAS_TRANSPOSE;
 ///
 enum CBLAS_UPLO {
 	///
-	Upper=121, 
+	Upper=121,
 	///
 	Lower=122
 };
@@ -109,7 +109,7 @@ alias Side = CBLAS_SIDE;
 ///
 enum CBLAS_OFFSET {
 	///
-	RowOffset=171, 
+	RowOffset=171,
 	///
 	ColOffset=172,
 	///
@@ -130,7 +130,7 @@ version(OPENBLAS)
 	char* get_config();
 
 	/// Get the parallelization type which is used by OpenBLAS
-	int get_parallel(); 
+	int get_parallel();
 }
 
 ///
