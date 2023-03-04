@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DlangScience/cblas.svg?branch=master)](https://travis-ci.org/DlangScience/cblas)
+[![CI](https://github.com/DlangScience/cblas/actions/workflows/d.yml/badge.svg)](https://github.com/DlangScience/cblas/actions/workflows/d.yml)
 
 D BLAS header
 =======
